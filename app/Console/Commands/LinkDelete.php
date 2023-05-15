@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Console\Commands;
+
 use App\Models\Link;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+
 class LinkDelete extends Command
 {
     /**

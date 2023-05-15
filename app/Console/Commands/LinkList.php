@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Link;
 use Illuminate\Console\Command;
 
 class LinkList extends Command
@@ -18,16 +19,22 @@ class LinkList extends Command
      *
      * @var string
      */
+    protected $description = 'List links saved in the database';
 
-     public function __construct()
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
         parent::__construct();
     }
 
-    protected $description = 'List saved links';
-
     /**
      * Execute the console command.
+     *
+     * @return int
      */
     public function handle()
     {

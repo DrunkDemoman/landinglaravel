@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Console\Commands;
-
+use App\Models\Link;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class LinkNew extends Command
 {
@@ -20,12 +21,20 @@ class LinkNew extends Command
      */
     protected $description = 'Create a New Link';
 
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
         parent::__construct();
     }
+
     /**
      * Execute the console command.
+     *
+     * @return int
      */
     public function handle()
     {
@@ -51,6 +60,5 @@ class LinkNew extends Command
         }
 
         return 0;
-    } 
-    
+    }
 }

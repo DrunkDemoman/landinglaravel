@@ -1,10 +1,10 @@
 <?php
-
+ 
 namespace App\Console\Commands;
-
+ 
 use App\Models\Link;
 use Illuminate\Console\Command;
-
+ 
 class LinkShow extends Command
 {
     /**
@@ -13,14 +13,14 @@ class LinkShow extends Command
      * @var string
      */
     protected $signature = 'link:show';
-
+ 
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'List links saved in the database';
-
+ 
     /**
      * Create a new command instance.
      *
@@ -30,7 +30,7 @@ class LinkShow extends Command
     {
         parent::__construct();
     }
-
+ 
     /**
      * Execute the console command.
      *
@@ -41,7 +41,7 @@ class LinkShow extends Command
         $headers = [ 'id', 'url', 'description' ];
         $links = Link::all(['id', 'url', 'description'])->toArray();
         $this->table($headers, $links);
-
+ 
         return 0;
     }
 }

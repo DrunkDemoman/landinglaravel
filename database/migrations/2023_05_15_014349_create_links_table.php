@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\LinkList;
 
 return new class extends Migration
 {
@@ -15,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('url', 200);
             $table->text('description');
-            $table->boolean('enabled')->default(true);
+            $table->foreignIdFor(LinkList::class);
             $table->timestamps();
         });
     }

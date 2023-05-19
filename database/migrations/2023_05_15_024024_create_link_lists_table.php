@@ -14,10 +14,10 @@ return new class extends Migration
     {
         Schema::create('link_lists', function (Blueprint $table) {
             $table->id();
-            $table->string('url', 200);
-            $table->text('description');
-            $table->foreignIdFor(LinkList::class);
             $table->timestamps();
+            $table->string('title', 60);
+            $table->string('slug', 60)->unique();
+            $table->text('description')->nullable();
         });
     }
 

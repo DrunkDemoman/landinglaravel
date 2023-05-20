@@ -33,7 +33,7 @@ Route::get('/{slug}', function ($slug){
 
     return view('index', [
         'list' => $list,
-        'links' => $list->links,
+        'links' => $list->links()->orderBy('created_at', 'desc')->get(),
         'lists' => LinkList::all()
     ]);
 

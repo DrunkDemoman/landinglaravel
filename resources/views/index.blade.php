@@ -36,7 +36,7 @@
             @endif
         </h1>
         <p class="subtitle">
-            @foreach ($lists as $list)<a href="{{ route('link-list', $list->slug) }}" title="{{ $list->title }}" class="tag is-info is-light">{{ $list->title }}</a> @endforeach
+            @foreach ($lists as $list)<a href="{{ route('link-list', $list->slug) }}" title="{{ $list->title }}" class="tag is-info is-light">{{ $list->title }} ({{ $list->links()->count() }})</a> @endforeach
         </p>
  
         <section class="links">
@@ -48,6 +48,13 @@
                 </div>
             @endforeach
         </section>
+
+        @if ($links->links()->paginator->hasPages())
+            <div class= "mt-4 p-4 box has-text-centered">
+                {{ $links->links() }}
+            </div>
+        @endif
+
     </div>
 </section>
 </body>

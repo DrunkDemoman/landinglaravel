@@ -1,7 +1,7 @@
 <h1> Tugas Eloquent Laravel </h1>
     <p> Nama: Ferdinand Putra Gumilang Silalahi</p>
         <P> NRP: 5025201176 </p>
-    <p> Link Youtube: <a href="https://youtu.be/2ZpcAz7qXFQ"> </a> </p>
+    <p> Link Youtube: <a href="https://youtu.be/2ZpcAz7qXFQ"> https://youtu.be/2ZpcAz7qXFQ </a> </p>
 
 
 
